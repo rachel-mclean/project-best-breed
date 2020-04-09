@@ -8,31 +8,38 @@ background-color: lightblue;
 font-family: Helvetica;
 }
 
-#main {
-width: 60%;
-border: 1px gray solid;
-margin: auto;
-padding: 10px;
-background-color: white;
-border-radius: 10px;
+.multiselect {
+  width: 200px;
 }
 
-#header {
-margin-top: 0;
-border: 2px solid black;
-padding: 5px;
-height: 250px;
+.selectBox {
+  position: relative;
 }
 
-label {
-width: 150px;
-display: inline-block;
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
 }
 
-button {
-display: block;
-margin-top: 20px;
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
 
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
 }
 </style>
 </head>
@@ -40,73 +47,43 @@ margin-top: 20px;
 <div id="main">
 <div id="header"><h1>Which Austin musical act are you most like?</h1></div>
 
-<form  id="form1">
-<p>How old are you?</p>
-<label><input type="radio" name="age" id="young" value="1" />under 18</label>
-<label><input type="radio" name="age" id="mid" value="2" />19-34</label>
-<label><input type="radio" name="age" id="old" value="3" />34+</label>
-
-<p>What would you prefer to do?</p>
-<label><input type="radio" name="activity" id="party" value="1" />Party</label>
-<label><input type="radio" name="activity" id="rock" value="2" />Rock out</label>
-<label><input type="radio"  name="activity" id="beer" value="3" />Drink beer</label>
-
-<p>What's your favorite style of music?</p>
-<label><input type="radio" name="genre" id="rock2" value="1" />Rock</label>
-<label><input type="radio" name="genre" id="indie" value="2" />Indie</label>
-<label><input type="radio" name="genre" id="country" value="3" />Country</label>
 
 
-<button type="submit" value="Submit">Submit</button>
-
-</form>
+<form>
+    <div class="multiselect">
+      <div class="selectBox" onclick="showCheckboxes()">
+        <select>
+          <option>Select an option</option>
+        </select>
+        <div class="overSelect"></div>
+      </div>
+      <div id="checkboxes">
+        <label for="one">
+          <input type="checkbox" id="one" />First checkbox</label>
+        <label for="two">
+          <input type="checkbox" id="two" />Second checkbox</label>
+        <label for="three">
+          <input type="checkbox" id="three" />Third checkbox</label>
+      </div>
+    </div>
+  </form>
 
 <p id="answer"></p>
 <p id="answer2"></p>
 </div>
 <script>
- document.getElementById("form1").onsubmit=function() {
-	   if(document.querySelector('input[name = "age"]:checked')) {
-	   age = parseInt(document.querySelector('input[name = "age"]:checked').value);
-       }
-       else {
-           age = 0;
-       }
+var expanded = false;
 
-	   if(document.querySelector('input[name = "activity"]:checked')) {
-	  activity = parseInt(document.querySelector('input[name = "activity"]:checked').value);
-         }
-       else {
-           activity = 0;
-       }
-
-       if(document.querySelector('input[name = "genre"]:checked')) {
-	  genre = parseInt(document.querySelector('input[name = "genre"]:checked').value);
-      }
-       else {
-            genre = 0;
-           }
-
-    total= age + activity + genre;
-
-    document.getElementById("answer").innerHTML = total;
-
-	   if(total < 4) {
-document.getElementById("answer2").innerHTML = "You got Quiet Company.";
+function showCheckboxes() {
+  var checkboxes = document.getElementById("checkboxes");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
 }
-
-   if(total >=4 && total < 7) {
-document.getElementById("answer2").innerHTML = "You got Spoon.";
-}
-
-	if(total >=7) {
-document.getElementById("answer2").innerHTML = "You got Willie Nelson.";
-}
-
-    return false; // required to not refresh the page; just leave this here
-	   }// end the submit function
-
-
-</script>
+</script> -->
 </body>
 </html>

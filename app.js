@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 let handlebars = require('express-handlebars');
 let hbs = require('handlebars');
+let { Model } = require('objection');
 let Knex = require('knex');
 
 
@@ -25,6 +26,12 @@ app.engine('hbs', handlebars({
   extname: 'hbs',
   defaultLayout: 'layout'
 }));
+
+app.root = (...args) => path.join(__dirname, ...args);
+let dbConfig = require(app.root('knexfile'));
+let knex = Knex(dbConfig[process.env.NODE_ENV]);
+Model.knex(knex);
+
 
 app.use(logger('dev'));
 app.use(express.json());
