@@ -2,6 +2,7 @@
 <html>
 <head>
 <title>Which Austin Musical Group...</title>
+<<<<<<< HEAD
 <!-- Jquery -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- {{!-- Bootstrap --}} -->
@@ -15,8 +16,51 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
 
 
+=======
+<style>
+body {
+background-color: lightblue;
+font-family: Helvetica;
+}
+
+.multiselect {
+  width: 200px;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+  font-weight: bold;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
+</style>
+>>>>>>> 1df63710b7105991b16eb0a728e9cd4c38ba00b4
 </head>
 
+<<<<<<< HEAD
 <body>
     <div class="container">
     <h2>Multiple items selector with filter</h2>
@@ -622,5 +666,45 @@ $(function () {
     });
 });
 </script>
+=======
+
+
+<form>
+    <div class="multiselect">
+      <div class="selectBox" onclick="showCheckboxes()">
+        <select>
+          <option>Select an option</option>
+        </select>
+        <div class="overSelect"></div>
+      </div>
+      <div id="checkboxes">
+        <label for="one">
+          <input type="checkbox" id="one" />First checkbox</label>
+        <label for="two">
+          <input type="checkbox" id="two" />Second checkbox</label>
+        <label for="three">
+          <input type="checkbox" id="three" />Third checkbox</label>
+      </div>
+    </div>
+  </form>
+
+<p id="answer"></p>
+<p id="answer2"></p>
+</div>
+<script>
+var expanded = false;
+
+function showCheckboxes() {
+  var checkboxes = document.getElementById("checkboxes");
+  if (!expanded) {
+    checkboxes.style.display = "block";
+    expanded = true;
+  } else {
+    checkboxes.style.display = "none";
+    expanded = false;
+  }
+}
+</script> -->
+>>>>>>> 1df63710b7105991b16eb0a728e9cd4c38ba00b4
 </body>
 </html>
