@@ -2,111 +2,625 @@
 <html>
 <head>
 <title>Which Austin Musical Group...</title>
+<!-- Jquery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- {{!-- Bootstrap --}} -->
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <div class="container">
+    <h2>Multiple items selector with filter</h2>
+    <div class="row">
+        <div class="form-group">
+            <div class="items-collection">
+
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group bizmoduleselect">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-car fa-2x">
+                                    </span>
+                                    <h5>active</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-laptop fa-2x"></span>
+                                    <h5>laptop</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-cube fa-2x"></span>
+                                    <h5>cube</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-lock fa-2x"></span>
+                                    <h5>secure</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-barcode fa-2x"></span>
+                                    <h5>barcode</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-key fa-2x"></span>
+                                    <h5>key</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-keyboard-o fa-2x"></span>
+                                    <h5>keyboard</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="items col-xs-6 col-sm-1 col-md-3 col-lg-2">
+                    <div class="info-block block-info clearfix">
+                        <div data-toggle="buttons" class="btn-group itemcontent">
+                            <label class="btn btn-secondary">
+                                <div class="itemcontent">
+                                    <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                    <span class="fa fa-truck fa-2x"></span>
+                                    <h5>adaptable</h5>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <br>
+        <div class="form-group">
+            <div class="col-sm-12 col-md-32 col-lg-22">
+                <i class="fa fa-search fa-2x float-xs-left searchicon"></i><input type="search" class="form-control" id="search" placeholder="Filter items...">
+            </div>
+        </div>
+    </div>
+</div>
+
 <style>
-body {
-background-color: lightblue;
-font-family: Helvetica;
+#search {
+    width:90%;
 }
 
-#main {
-width: 60%;
-border: 1px gray solid;
-margin: auto;
-padding: 10px;
-background-color: white;
-border-radius: 10px;
+.btn {
+    width: 85px;
+    height: 50px;
+    margin-right: 5px;
 }
 
-#header {
-margin-top: 0;
-border: 2px solid black;
-padding: 5px;
-height: 250px;
+.col-lg-2 {
+    padding-right: 0;
+    padding-left: 0;
 }
 
-label {
-width: 150px;
-display: inline-block;
+.items.col-xs-6.col-sm-1.col-md-3.col-lg-2 {
+    width: 90px;
+    margin-top: 10px;
+}
+.btn.active {
+    background-color: rgb(138, 138, 233);
 }
 
-button {
-display: block;
-margin-top: 20px;
+.searchicon {
+    color:#5CB85C;
+}
 
+.items-collection{
+    margin:20px 0 0 0;
+}
+.items-collection label.btn-default.active{
+    background-color:#007ba7;
+    color:#FFF;
+}
+.items-collection label.btn-default{
+    width:90%;
+    border:1px solid #305891;
+    margin:5px;
+    border-radius: 17px;
+    color: #305891;
+}
+.items-collection label .itemcontent{
+    width:100%;
+}
+.items-collection .btn-group{
+    width:90%
 }
 </style>
-</head>
-<body>
-<div id="main">
-<div id="header"><h1>Which Austin musical act are you most like?</h1></div>
 
-<form  id="form1">
-<p>How old are you?</p>
-<label><input type="radio" name="age" id="young" value="1" />under 18</label>
-<label><input type="radio" name="age" id="mid" value="2" />19-34</label>
-<label><input type="radio" name="age" id="old" value="3" />34+</label>
-
-<p>What would you prefer to do?</p>
-<label><input type="radio" name="activity" id="party" value="1" />Party</label>
-<label><input type="radio" name="activity" id="rock" value="2" />Rock out</label>
-<label><input type="radio"  name="activity" id="beer" value="3" />Drink beer</label>
-
-<p>What's your favorite style of music?</p>
-<label><input type="radio" name="genre" id="rock2" value="1" />Rock</label>
-<label><input type="radio" name="genre" id="indie" value="2" />Indie</label>
-<label><input type="radio" name="genre" id="country" value="3" />Country</label>
-
-
-<button type="submit" value="Submit">Submit</button>
-
-</form>
-
-<p id="answer"></p>
-<p id="answer2"></p>
-</div>
 <script>
- document.getElementById("form1").onsubmit=function() {
-	   if(document.querySelector('input[name = "age"]:checked')) {
-	   age = parseInt(document.querySelector('input[name = "age"]:checked').value);
-       }
-       else {
-           age = 0;
-       }
-
-	   if(document.querySelector('input[name = "activity"]:checked')) {
-	  activity = parseInt(document.querySelector('input[name = "activity"]:checked').value);
-         }
-       else {
-           activity = 0;
-       }
-
-       if(document.querySelector('input[name = "genre"]:checked')) {
-	  genre = parseInt(document.querySelector('input[name = "genre"]:checked').value);
-      }
-       else {
-            genre = 0;
-           }
-
-    total= age + activity + genre;
-
-    document.getElementById("answer").innerHTML = total;
-
-	   if(total < 4) {
-document.getElementById("answer2").innerHTML = "You got Quiet Company.";
-}
-
-   if(total >=4 && total < 7) {
-document.getElementById("answer2").innerHTML = "You got Spoon.";
-}
-
-	if(total >=7) {
-document.getElementById("answer2").innerHTML = "You got Willie Nelson.";
-}
-
-    return false; // required to not refresh the page; just leave this here
-	   }// end the submit function
-
-
+$(function () {
+    $('#search').on('keyup', function () {
+        var pattern = $(this).val();
+        $('.items-collection .items').hide();
+        $('.items-collection .items').filter(function () {
+            return $(this).text().match(new RegExp(pattern, 'i'));
+        }).show();
+    });
+});
 </script>
 </body>
 </html>
