@@ -24,7 +24,8 @@ class Breed extends Model {
         maxWeight: {type: ['integer', 'null']},
         minWeight: {type: ['integer', 'null']},
         maxHeight: {type: ['integer', 'null']},
-        minHeight: {type: ['integer', 'null']}
+        minHeight: {type: ['integer', 'null']},
+        imageUrl: {type: ['string', 'null']}
       }
     }
   }

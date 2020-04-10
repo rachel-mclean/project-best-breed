@@ -24,6 +24,7 @@ function processBreed(breed) {
   // }
 
   return {
+    id: breed.id,
     name: breed.name,
     // temperament: temperamentList,
     bredFor: breed.bred_for,

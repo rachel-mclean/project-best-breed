@@ -1,7 +1,7 @@
 
 exports.up = function(knex) {
   return knex.schema.createTable('breeds', (table) => {
-    table.increments('id').primary();
+    table.integer('id').primary();
     table.text('name').notNullable();
     table.text('bred_for');
     table.text('breed_group');
