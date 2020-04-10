@@ -7,13 +7,17 @@ let Relation = require('../models/Relation');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('main');
+  let showButton = true;
+  res.render('main', {showButton});
 });
 
 router.get('/find', async (req,res,next) => {
 
-  let temperaments = await Temperament.query();
-
+  let fromDB = await Temperament.query();
+  let temperaments = [];
+  for (let item of fromDB) {
+    temperaments.push(item.temperament);
+  }
   res.render('main', { temperaments });
 });
 
@@ -36,7 +40,7 @@ router.get('/preferences', async (req, res, next) => {
       temperamentList.push(item.temperament);
     }
 
-    each['temperaments'] = temperamentList;
+    each['temperament'] = temperamentList.join(', ');
     each['matches'] = 0;
     for (let temp of temperamentList) {
       if (preferences.temperaments.includes(temp)) {
@@ -47,8 +51,8 @@ router.get('/preferences', async (req, res, next) => {
 
   // Get top 10 dogs by matches
   let results = allBreeds.sort((breedA, breedB) => breedB.matches - breedA.matches).slice(0,10);
+  results[0]['active'] = true;
 
-  console.log(results);
   console.log(preferences);
 
   res.render('main', {results});

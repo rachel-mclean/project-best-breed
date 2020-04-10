@@ -1,14 +1,29 @@
 {{!-- Header/Navbar --}}
 <header>
-  <nav class="navbar navbar-light bg-light container" style="text-align: center">
+  <nav class="navbar navbar-light container" style="text-align: center">
     <a class="navbar-brand align-content-center" style="float: none;" href="/"><h1>Project Best Breed</h1></a>
   </nav>
 </header>
 
+{{#if showButton}}
+  <div class="centered-text">
+    <h2 style="color: rgb(250, 250, 186)">Find the best doggos to bring joy to your life!</h2>
+    <a style="width: fit-content; margin: 2% auto; color: rgb(250, 250, 186)" href="/find" class="btn btn-primary center-block">Click to start!</a>
+  </div>
+{{!-- Code goes here --}}
+{{/if}}
+
+
+{{#if temperaments}}
 {{> preferencesForm}}
+{{/if}}
 
 {{#if results}}
 <div class="container-fluid">
 {{> resultsSection}}
+</div>
+
+<div class="centered-text">
+  <a class="btn btn-primary" href="/find">Search Again</a>
 </div>
 {{/if}}

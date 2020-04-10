@@ -1,13 +1,161 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-variant: small-caps;
+
+}
+
+header {
+  width: 100%;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.centered-text {
+  margin: 2% auto;
+  width: fit-content;
 }
 
 a {
   color: #00B7FF;
 }
 
-img.breed-image {
-  width: 50%;
-  height: 50%;
+#results-carousel .dog-carousel-item img {
+  width: 400px;
+  height: 400px;
+}
+
+#results-carousel {
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.image-container-div {
+  margin: 0 auto;
+  width: fit-content;
+}
+
+#search {
+  width:90%;
+}
+body {
+  background-color:rgb(167, 236, 221);
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+.btn {
+  width: 120%;
+  height: 50px;
+  margin-right: 5px;
+  border-radius: 4px;
+
+
+}
+.col-sm-12.col-md-32.col-lg-22 {
+  padding-bottom: 5px;
+}
+.row {
+  background-color: rgb(250, 250, 186);
+  border-radius: 5px;
+}
+.col-lg-2 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.items.col-xs-6.col-sm-1.col-md-3.col-lg-3 {
+  width: 100px;
+  margin-top: 10px;
+  margin-left: 3px;
+  margin-right: 3px;
+  box-shadow: 2px 4px 25px rgb(230, 230, 222);
+  border-width: 2px;
+
+
+}
+.btn.active {
+  background-color: rgb(167, 236, 221);
+  color: white;
+}
+
+.searchicon {
+  color:#5CB85C;
+}
+
+.fa.fa-search.fa-2x.float-xs-left.searchicon {
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.items-collection{
+  margin:20px 0 0 0;
+
+}
+
+.items-collection label.btn-default.active{
+  background-color:#007ba7;
+  color:#FFF;
+}
+
+.items-collection label.btn-default{
+  width:90%;
+  border:1px solid #305891;
+  margin:5px;
+  border-radius: 17px;
+  color: #305891;
+}
+
+.items-collection label .itemcontent{
+  width:110%;
+}
+
+.items-collection .btn-group{
+  width:95%
+}
+
+.doggydex {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h5 {
+  font-family: Comic Sans MS, Comic Sans, cursive;
+  font-size: 13px;
+}
+.container {
+  background-color: rgba(0, 204, 255, 0.753);
+  border-radius: 5px;
+
+}
+
+header {
+  border-radius: 5px;
+}
+btn.btn-outline-primary {
+  background-color: yellow;
+  color: black;
+}
+
+h1 {
+  color: rgb(250, 250, 186);
+}
+
+h2 {
+  font-family: Comic Sans MS, Comic Sans, cursive;
+font-variant: small-caps;
+
+}
+.column {
+float: left;
+width: 50%;
+padding: 5px;
+}
+
+.carousel-indicators li {
+  background-color: black;
+}
+
+/* Clear floats after image containers */
+.row2::after {
+content: "";
+clear: both;
+display: table;
 }
