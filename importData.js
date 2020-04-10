@@ -4,7 +4,7 @@ let getAllTemperaments = require('./research/getAllTemperaments');
 let { Model } = require('objection');
 let Breed = require('./models/Breed');
 let Temperament = require('./models/Temperament');
-let Relation = require('./models/Relation');
+
 let Knex = require('knex');
 
 let dbConfig = require('./knexfile');
